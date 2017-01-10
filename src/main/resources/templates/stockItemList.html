@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Kiwi Stock Control</title>
+</head>
+<body>
+    <h2>Stock Items</h2>
+    <div th:unless="${#lists.isEmpty(stockItems)}"  >
+
+        <dl th:each = "item : ${stockItems}" >
+            <span th:text= "${item.id}"> ID</span>
+            <span th:text= "${item.itemName}"> Name </span>
+            <span th:text= "${item.serialNumber}"> Serial </span>
+        </dl>
+    </div>
+
+    <div th:if="${#lists.isEmpty(stockItems)}">
+        <p>No Items are avaialble in the stocks</p>
+
+    </div>
+
+
+</body>
+</html>

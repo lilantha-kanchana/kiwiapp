@@ -1,0 +1,5 @@
+-- DROP TABLE   STOCKITEMS IF EXISTS ;
+CREATE TABLE STOCKITEMS if not exists (  id INTEGER PRIMARY KEY,
+  itemName VARCHAR (50) ,
+  serialNumber VARCHAR (50)
+);
